@@ -1,0 +1,160 @@
+
+
+.label, .label1, .label2 {
+    border: 2px solid lightblue;
+    width:80%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+}
+input, select, textarea{
+    width:90%;
+    height: 100%;
+}
+
+.container{
+    display:grid;
+    grid-template-rows:auto;
+    width:80%;
+    padding:10px;
+    margin:auto;
+    border:2px solid black;
+}
+.row1, .row2, .row3, .row4, .row5, .row6, .row7{
+    padding: 10px 0;
+}
+.row1{
+    display:grid;
+    grid-template-columns:repeat(10,1fr);
+    justify-content: stretch;
+    grid-template-areas:
+     'label label field field field label1 label1 field1 field1 field1';
+}
+.row1 .label{
+    grid-area: label;
+}
+.row1 .label1{
+    grid-area: label1;
+}
+.row1 .field{
+    grid-area: field;
+    min-height: 100% !important;
+
+}
+.row1 .field1{
+    grid-area: field1;
+}
+
+.row2 {
+    display: grid;
+    grid-template-columns:repeat(10,1fr);
+    grid-template-areas:
+    'label label field field field1 field1 field2 field2 field3 field3';
+}
+.row2 .label{
+    grid-area: label;
+}
+.row2 .field{
+    grid-area: field;
+}
+.row2 .field1{
+    grid-area: field1;
+}
+.row2 .field2{
+    grid-area: field2;
+}
+.row2 .field3{
+    grid-area: field3;
+}
+
+.row3 {
+    display: grid;
+    grid-template-columns:repeat(10 ,1fr);
+    grid-template-areas:
+    'label label field field field field field field field field';
+    
+}
+.row3 .label{
+    grid-area: label;
+}
+.row3 .field{
+    grid-area: field;
+}
+.row4 {
+    display: grid;
+    grid-template-columns:repeat(10 ,1fr);
+
+    grid-template-areas:
+    'label label field field field field field field field field';
+}
+.row4 .label{
+    grid-area: label;
+}
+.row4 .field{
+    grid-area:field;
+}
+.row5{
+    display: grid;
+    grid-template-columns:repeat(10 ,1fr);
+    grid-template-areas:
+        'label label field field label1 label1 field1 label2 label2 field2';
+}
+.row5 .label{
+    grid-area: label;
+}
+
+.row5 .field{
+    grid-area: field;
+}
+
+.row5 .label1{
+    grid-area: label1;
+}
+
+.row5 .field1{
+    grid-area: field1;
+}
+
+.row5 .label2{
+    grid-area: label2;
+}
+
+.row5 .field2{
+    grid-area: field2;
+}
+.row6{
+    display:grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-content: space-between;
+    grid-template-areas:
+        'label label . . label1 label1 . . . .';
+}
+.row6 .label1, .row6 .label{
+    font-size:18px;
+    padding:5px;
+    width: 100%;
+}
+.row6 .label1:hover, .row6 .label:hover{
+    cursor: not-allowed;
+}
+.row7 {
+    display:inline-grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-areas:
+        '. . . . . button . . . . . ';
+}
+.row7 button{
+    grid-area:button;
+    border:2px solid rgb(76, 76, 199);
+    padding:10px 45px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: rgb(194, 164, 222);
+    transition: background-color 200ms ease, font-weight 200ms ease-out;
+}
+.row7 button:hover{
+    animation: overButton 350ms ease-in-out;
+    transform: scale(1.1);
+    background-color: rgb(152, 89, 211);
+    font-weight: bolder;
+}

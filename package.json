@@ -1,0 +1,21 @@
+{
+  "name": "form-reserva",
+  "version": "2.0.0",
+  "description": "formulario de reserva de pedidos",
+  "main": "server.js",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "mongoose": "^5.9.15",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

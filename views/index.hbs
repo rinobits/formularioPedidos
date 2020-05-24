@@ -1,0 +1,85 @@
+{{> head}}
+        <form action="/" method="POST">
+            <div class="container">
+                <div class="row1">
+                    <div class="label">Solicitante</div>
+                    <div class="field">
+                        <input name="solicitante" class="form-control" id="solicitante" type="text" required>
+                    </div>
+                    <div class="label1">Teléfono</div>
+                    <div class="field1"><input name="telefono" class="form-control" id="telefono" type="text" required></div>
+                </div>
+                <div class="row2">
+                    <div class="label">Torta</div>
+                    <div class="field">
+                        <select name="tipoMasa" id="tipoMasa" class="form-control" required>
+                                        {{#each tipoMasa}}
+                                        <option value="{{this}}">{{this}}</option>
+                                        {{/each}}
+                                    </select>
+                    </div>
+                    <div class="field1">
+                        <select name="saborMasa" id="saborMasa" class="form-control" required>
+                                        {{#each saborMasa}}
+                                        <option value="{{this}}">{{this}}</option>
+                                        {{/each}}
+                                    </select>
+                    </div>
+                    <div class="field2">
+                        <select name="cobertura" id="cobertura" class="form-control" required>
+                                        {{#each cobertura}}
+                                        <option value="{{this}}">{{this}}</option>
+                                        {{/each}}
+                                    </select>
+                    </div>
+                    <div class="field3">
+                        <select name="tamano" id="tamano" class="form-control" required>
+                                        {{#each tamano}}
+                                        <option value="{{this}}">{{this}}</option>
+                                        {{/each}}
+                        </select>
+                    </div>
+                </div>
+                <div class="row3">
+                    <div class="label">Características</div>
+                    <div class="field">
+                        <textarea name="caracteristicas" class="form-control" id="caracteristicas" required></textarea>
+                    </div>
+                </div>
+                <div class="row4">
+                    <div class="label">Mensaje</div>
+                    <div class="field">
+                        <textarea name="mensaje" class="form-control" id="mensaje" required></textarea>
+                    </div>
+                </div>
+                <div class="row5">
+                    <div class="label">Hora</div>
+                    <div class="field">
+                        <select name="horaDrop" id="horaDrop" class="form-control" required>
+                                        {{#each horaDrop}}
+                                        <option value="{{this}}">{{this}}</option>
+                                        {{/each}}
+                                    </select>
+                    </div>
+                    <div class="label1">Abono</div>
+                    <div class="field1">
+                        <input name="abono" class="form-control" id="abono" type="text" required>
+                    </div>
+                    <div class="label2">Precio</div>
+                    <div class="field2">
+                        <input name="precio" class="" id="precio" type="text" required>
+                    </div>
+                </div>
+                <div class="row6">
+                    <button class="label" disabled>Diet</button>
+                    <button class="label1" disabled>Cuadrícula</button>
+                </div>
+                <div class="row7">
+                    <button class="" id="confirmacion" name="confirmacion" type="submit" value="true">
+                        Confirmar pedido
+                    </button>
+                </div>
+            </div>
+        </form>
+
+{{> footer}}
